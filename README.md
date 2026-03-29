@@ -151,6 +151,20 @@ Rock
 
 ---
 
+## 5 Results
+
+The model was evaluated on a seperate test dataset using model.evaluate().
+
+With three possible genres, a random baseline accuracy would be approximately 33%.
+
+The trained model achieved:
+
+Test Accuracy: ~72%
+Test Loss: ~0.82 (categorical crossentropy)
+681/681 ━━━━━━━━━━━━━━━━━━━━ 2s 3ms/step - accuracy: 0.7222 - loss: 0.8161
+
+This demonstrates the effectiveness of embedding-based representations over simple statistical baselines for text classification tasks.
+
 ## Training Process
 
 The model is trained using:
