@@ -32,7 +32,7 @@ Country
 
 ## Dataset
 
-The dataset contains song lyrics labeled with their corresponding genre.
+The datasets contains song lyrics labeled with their corresponding genre.
 
 | Column | Description |
 |------|------|
