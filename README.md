@@ -8,7 +8,7 @@ This project demonstrates how unstructured textual data (in this case: song lyri
 
 ## Project Overview
 
-Song lyrics contain stylistic patterns that often correlate with musical genres.  
+Song lyrics contain stylistic patterns (in particular: words [text vectorization] and their definition [word embedding])that often correlate with musical genres.  
 This project builds a machine learning system that learns those patterns and predicts a song's genre directly from its lyrics.
 
 The pipeline performs:
