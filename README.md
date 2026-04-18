@@ -32,7 +32,7 @@ Country
 
 ## Dataset
 
-The datasets contains song lyrics labeled with their corresponding genre.
+The datasets contain song lyrics labeled with their corresponding genre.
 
 | Column | Description |
 |------|------|
@@ -47,8 +47,7 @@ Example:
 | "We will rock you..." | Rock |
 | "Drop it like it's hot..." | Hip-Hop |
 
-The dataset is split into:
-
+There are 3 datasets:
 • Training set  
 • Validation set  
 • Test set  
