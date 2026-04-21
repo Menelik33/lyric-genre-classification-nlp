@@ -3,6 +3,7 @@
 Predicting a song's genre (Hip-Hop, Pop, or Rock) from its lyrics using an NLP pipeline built with TensorFlow/Keras.
 
 Three models of increasing sophistication are implemented, demonstrating progression from a simple baseline to transfer learning with fine-tuned word embeddings.
+
 Example input:
 
 "I'm standing on the corner with my guitar tonight"
