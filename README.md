@@ -12,11 +12,12 @@ Song lyrics labeled with genre, sourced from the MIT XPro Lyric Genre dataset.
 
 | Split | File | Samples |
 |-------|------|---------|
-| Train | `lyric_genre_train.csv` | 48,991 |
-| Validation | `lyric_genre_val.csv` | — |
-| Test | `lyric_genre_test.csv` | — |
+| Train | `lyric_genre_train_MIT.csv` | 48,991 |
+| Validation | `lyric_genre_val_MIT.csv` | — |
+| Test | `lyric_genre_test_MIT.csv` | — |
 
 **Genre distribution (train set):** Rock 54.9% · Pop 29.5% · Hip-Hop 15.5%
+
 ---
 
 ## Pipeline Overview
