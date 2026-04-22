@@ -41,6 +41,8 @@ Genre Prediction (softmax, 3 classes)
 
 ---
 
+---
+
 ## Models
 
 ### Model 1 — Bag of Words Baseline
@@ -64,114 +66,49 @@ Pre-trained GloVe vectors (Stanford NLP, 6B tokens, 100 dimensions) are loaded a
 Same architecture as Model 2, but with `trainable=True` on the embedding layer. Backpropagation updates the GloVe vectors during training, adapting word representations to the lyric domain.
 
 **Architecture:** `Input` → `Embedding(GloVe, fine-tuned)` → `GlobalAveragePooling1D` → `Dense(8)` → `Dropout(0.5)` → `Dense(3, softmax)`
-## 5 Results
-
-The model was evaluated on a seperate test dataset using model.evaluate().
-
-With three possible genres, a random baseline accuracy would be approximately 33%.
-
-The trained model achieved:
-
-Test Accuracy: ~72%
-Test Loss: ~0.82 (categorical crossentropy)
-681/681 ━━━━━━━━━━━━━━━━━━━━ 2s 3ms/step - accuracy: 0.7222 - loss: 0.8161
-
-This demonstrates the effectiveness of embedding-based representations over simple statistical baselines for text classification tasks.
-
-## Training Process
-
-The model is trained using:
-
-• Cross-entropy loss  
-• Backpropagation  
-• Gradient descent optimization  
-
-Training data is used to learn patterns in lyrics associated with different genres.
-
-Validation data is used to monitor generalization performance.
-
-Test data is used for final evaluation.
 
 ---
 
-## Key NLP Techniques Used
+## Results
 
-• Text vectorization using **Keras TextVectorization**  
-• Vocabulary construction from raw text  
-• Multi-hot encoding for high-dimensional sparse text representation  
-• Genre label encoding via one-hot vectors  
-• Token frequency-based vocabulary selection  
-• Neural network text classification  
+| Model | Test Accuracy |
+|-------|--------------|
+| Model 1 — Bag of Words Baseline | __% |
+| Model 2 — Transfer Learning: Frozen GloVe | __% |
+| Model 3 — Transfer Learning: Fine-tuned GloVe | __% |
 
----
-
-## Machine Learning Techniques
-
-• Feedforward neural networks  
-• Softmax multi-class classification  
-• Cross-entropy optimization  
-• Train / validation / test dataset splitting  
-• Model evaluation on unseen data  
+*Random baseline accuracy: ~33% (3 classes)*
 
 ---
 
-## Technologies Used
+## Usage
 
-• Python  
-• TensorFlow  
-• Keras  
-• NumPy  
-• Pandas  
-• Matplotlib  
+Designed to run in **Google Colab**.
+
+1. Upload the three CSV files to Google Drive under `MyDrive/XPro/`
+2. Open `NLP_lyric_identifier.ipynb` in Colab and mount Drive
+3. Run all cells — GloVe embeddings are downloaded automatically
+4. Use `lyric_predict()` to classify any lyric fragment:
+
+```python
+lyric_predict("I grew up on the crime side, the New York Times side")
+# 91.24% Hip-Hop
+# 05.43% Pop
+# 03.33% Rock
+```
+
+---
+
+## Technologies
+
+Python · TensorFlow · Keras · NumPy · Pandas · Matplotlib · GloVe (Stanford NLP)
 
 ---
 
 ## What This Project Demonstrates
 
-This project demonstrates the ability to:
-
-• Build NLP preprocessing pipelines for text data  
-• Transform raw language into numerical ML features  
-• Construct vocabularies and vectorization layers  
-• Train neural networks for text classification  
-• Evaluate models using structured dataset splits  
-• Work with high-dimensional sparse text representations  
-
----
-
-## Key Technical Contributions
-
-### Custom Text Vectorization Pipeline
-
-Implemented a preprocessing pipeline using **Keras TextVectorization** to convert raw lyrics into numerical feature vectors suitable for neural network training.
-
-### Vocabulary Construction from Training Corpus
-
-Built a 5,000-token vocabulary from the training dataset by scanning word frequencies and mapping each token to a unique index.
-
-### Sparse Multi-Hot Feature Engineering
-
-Represented lyrics as **multi-hot vectors**, enabling efficient learning from high-dimensional sparse text features.
-
-### Neural Genre Classification Model
-
-Designed and trained a neural network capable of predicting music genre based on textual patterns within song lyrics.
-
-### Structured Training Workflow
-
-Implemented training, validation, and test dataset separation to properly evaluate model performance on unseen data.
-
----
-
-## Example Prediction
-
-Input lyric:
-
-"I will party tonight until the sun comes up"
-
-Model prediction:
-
-Pop
-
----
-
+- Building an end-to-end NLP classification pipeline from raw text
+- Vocabulary construction and multi-hot feature engineering
+- Applying transfer learning with pre-trained word embeddings
+- Fine-tuning embeddings to adapt to a specific text domain
+- Evaluating model progression across train / validation / test splits
