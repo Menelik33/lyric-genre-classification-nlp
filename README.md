@@ -12,11 +12,11 @@ Song lyrics labeled with genre, sourced from the MIT XPro Lyric Genre dataset.
 
 | Split | File | Samples |
 |-------|------|---------|
-| Train | `lyric_genre_train_MIT.csv` | 48,991 |
+| Train | `lyric_genre_train_MIT.csv` | 16,883 |
 | Validation | `lyric_genre_val_MIT.csv` | — |
 | Test | `lyric_genre_test_MIT.csv` | — |
 
-**Genre distribution (train set):** Rock 54.9% · Pop 29.5% · Hip-Hop 15.5%
+**Genre distribution (train set):** Rock 54.7% · Pop 30% · Hip-Hop 15.1%
 
 ---
 
@@ -70,9 +70,9 @@ Same architecture as Model 2, but with `trainable=True` on the embedding layer. 
 
 ## Results
 
-| Model | Test Accuracy |
-|-------|--------------|
-| Model 1 — Bag of Words Baseline | __% |
+| Model | Test Accuracy | Test Loss (Cat. Cross-Entropy) |
+|-------|--------------|--------------------------------|
+| Model 1 — Bag of Words Baseline | 72.22% | 0.82 |
 | Model 2 — Transfer Learning: Frozen GloVe | __% |
 | Model 3 — Transfer Learning: Fine-tuned GloVe | __% |
 
