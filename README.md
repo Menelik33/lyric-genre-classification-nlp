@@ -72,9 +72,9 @@ Same architecture as Model 2, but with `trainable=True` on the embedding layer. 
 
 | Model | Test Accuracy | Test Loss (Cat. Cross-Entropy) |
 |-------|--------------|--------------------------------|
-| Model 1 — Bag of Words Baseline | 66.83% | 1.80 |
-| Model 2 — Transfer Learning: Frozen GloVe | __% |
-| Model 3 — Transfer Learning: Fine-tuned GloVe | __% |
+| Model 1 — Bag of Words Baseline | 67.62% | 1.00 |
+| Model 2 — Transfer Learning: Frozen GloVe | 67.38% | .763 |
+| Model 3 — Transfer Learning: Fine-tuned GloVe | 71.71% | .688 |
 
 *Random baseline accuracy: ~33% (3 classes)*
 
